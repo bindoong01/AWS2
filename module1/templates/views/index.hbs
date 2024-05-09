@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../pubilc/css/style.css"/>
+    <script src="/js/api.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-contender">
+        {{>header}}
+        <p>관광지를 알고 싶은 장소를 입력하세요</p>
+        <form action="/area" method="post">
+            <input placeholder="장소" name="location">
+            <button>Search</button>
+        </form>
+        <form action="/weather" method="post">
+            <input placeholder="장소" name="location">
+            <button>Search</button>
+        </form>
+        <form action="/image" method="post">
+            <input placeholder="설명" name="location">
+            <button>Search</button>
+            
+        </form>
+        {{>footer}}
+    </div>
+
+</body>
+</html>
