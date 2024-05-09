@@ -4,7 +4,7 @@ const path = require("path");
 const hbs = require("hbs");
 const areadata = require("../src/utils/areadata.js");
 const weatherdata = require("../src/utils/weatherdata.js");
-const  OpenAIApi  = require("openai");
+const  OpenAIApi  = require("openai");      
 const { stringify } = require("querystring");
 require("dotenv").config();
 
@@ -12,7 +12,7 @@ require("dotenv").config();
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const publicdir = path.join(__dirname,"../public");
 const viewPath = path.join(__dirname,"../templates/views");
 const partialsPath = path.join(__dirname,"../templates/partials");
