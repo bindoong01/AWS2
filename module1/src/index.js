@@ -7,6 +7,7 @@ const weatherdata = require("../src/utils/weatherdata.js");
 const  OpenAIApi  = require("openai");      
 const { stringify } = require("querystring");
 require("dotenv").config();
+const { createLogger, format, transports } = require('winston');
 
 // const sanitizeHtml = require('sanitize-html');
 
@@ -78,6 +79,16 @@ app.post("/image", async (req, res) => { //post 요청 경로 설정
     }
     createImage();
   });
+
+const logger = createLogger({
+level: 'info',
+format: format.json(),
+transports: [
+new transports.File({ filename: 'combined.log' }),
+new transports.File({ filename: 'error.log', level: 'error' }),
+],
+});
+
     
 
 app.listen(PORT,()=>{
