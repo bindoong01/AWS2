@@ -29,7 +29,7 @@ app.use(express.static(publicdir));
 
 app.get('/',(req,res)=>{
     res.render("index",{
-        TITLE: "관광지 정보",
+        TITLE: "API 과제",
         NAME: "HDB",
         EMAIL: "shinhan",
     })
@@ -56,9 +56,7 @@ app.post("/weather",(req,res)=>{
             return res.send({error});
         }
         return res.render('weather',{
-            location: weather["response"]["body"]["items"]["item"][0]["addr1"],
-            location_2: weather["response"]["body"]["items"]["item"][0]["addr2"],
-            object: weather["response"]["body"]["items"]["item"][0]["title"],
+            location: weather["response"]["body"]["items"]["item"][0]["t1"],
         })
     })
 })

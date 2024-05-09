@@ -10,15 +10,17 @@
 <body>
     <div class="main-contender">
         {{>header}}
-        <p>관광지를 알고 싶은 장소를 입력하세요</p>
+        <p>강남 거리로부터 관광지 정보</p>
         <form action="/area" method="post">
             <input placeholder="장소" name="location">
             <button>Search</button>
         </form>
+        <p>속보 코드를 통한 속보알림</p>
         <form action="/weather" method="post">
-            <input placeholder="장소" name="location">
+            <input placeholder="코드" name="location">
             <button>Search</button>
         </form>
+        <p>달리3를 통해 이미지 생성</p>
         <form action="/image" method="post">
             <input placeholder="설명" name="location">
             <button>Search</button>
